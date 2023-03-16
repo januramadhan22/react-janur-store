@@ -2,17 +2,21 @@ import React, { useState } from "react";
 import { RiUser6Line } from "react-icons/ri";
 import { HiOutlineSearch } from "react-icons/hi";
 
-function Navbar({ openSearch, setOpenSearch }) {
+function Navbar({ openSearch, setOpenSearch, onClose }) {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <>
-      <nav className="relative px-20 py-7 w-full flex items-center justify-center bg-gray-50">
-        <button className="relative z-20 px-3 py-1 rounded-lg text-base sm:text-xl active:bg-slate-200 transition-all ease-out">
+      <nav className="sticky top-0 z-10 px-20 py-7 w-full flex items-center justify-center bg-gray-50">
+        <div
+          onClick={onClose}
+          className="w-full h-full absolute top-0 left-0 bg-transparent z-20"
+        />
+        <button className="relative z-30 px-3 py-1 rounded-lg text-base sm:text-xl active:bg-slate-200 transition-all ease-out">
           J A N U R
         </button>
 
-        <div className="absolute right-20 hidden md:flex items-center gap-4">
+        <div className="absolute z-30 right-20 hidden md:flex items-center gap-4">
           <div
             onClick={() => setOpenSearch(true)}
             className={`flex items-center gap-1 transition-all ease-out  ${
@@ -99,7 +103,10 @@ function Navbar({ openSearch, setOpenSearch }) {
       </nav>
 
       {/* Menubar */}
-      <div className="relative z-20 w-full hidden md:flex md:justify-center bg-gray-50 pb-3">
+      <div
+        onClick={onClose}
+        className="sticky top-[88px] z-20 w-full hidden md:flex md:justify-center bg-gray-50 pb-3 transition-all ease-out"
+      >
         <button className="w-32 h-10 text-center uppercase text-sm rounded-lg hover:bg-slate-200 transition-all ease-out duration-200">
           Discount
         </button>
