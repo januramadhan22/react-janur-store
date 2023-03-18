@@ -1,11 +1,11 @@
 import { axiosCreate } from "../axiosCreate";
 
-export const GET_ALL_PRODUCTS = "GET_ALL_PRODUCTS";
+export const GET_ALL_CATEGORIES = "GET_ALL_CATEGORIES";
 
-export const getAllProducts = () => {
+export const getAllCategories = () => {
   return (dispatch) => {
     dispatch({
-      type: GET_ALL_PRODUCTS,
+      type: GET_ALL_CATEGORIES,
       payload: {
         loading: true,
         data: false,
@@ -14,10 +14,10 @@ export const getAllProducts = () => {
     });
 
     axiosCreate
-      .get("products")
+      .get("products/categories")
       .then((response) => {
         dispatch({
-          type: GET_ALL_PRODUCTS,
+          type: GET_ALL_CATEGORIES,
           payload: {
             loading: false,
             data: response.data,
@@ -27,7 +27,7 @@ export const getAllProducts = () => {
       })
       .catch((error) => {
         dispatch({
-          type: GET_ALL_PRODUCTS,
+          type: GET_ALL_CATEGORIES,
           payload: {
             loading: false,
             data: false,

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { RiUser6Line } from "react-icons/ri";
 import { HiOutlineSearch } from "react-icons/hi";
 
-function Navbar({ openSearch, setOpenSearch, onClose }) {
+function Navbar({ openSearch, setOpenSearch, onClose, changeView }) {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
@@ -113,7 +113,10 @@ function Navbar({ openSearch, setOpenSearch, onClose }) {
         <button className="w-32 h-10 text-center uppercase text-sm rounded-lg hover:bg-slate-200 transition-all ease-out duration-200">
           New Arrival
         </button>
-        <button className="w-32 h-10 text-center uppercase text-sm rounded-lg hover:bg-slate-200 transition-all ease-out duration-200">
+        <button
+          onClick={changeView}
+          className="w-32 h-10 text-center uppercase text-sm rounded-lg hover:bg-slate-200 transition-all ease-out duration-200"
+        >
           Categories
         </button>
         <button className="w-32 h-10 text-center uppercase text-sm rounded-lg hover:bg-slate-200 transition-all ease-out duration-200">

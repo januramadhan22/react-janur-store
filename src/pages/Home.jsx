@@ -1,20 +1,14 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Banner from "../components/Banner";
+import CategoriesList from "../components/frame/CategoriesList";
 import ProductList from "../components/frame/ProductList";
 import Navbar from "../components/Navbar";
-import { getAllProducts } from "../utils/actions/productActions";
 
 function Home() {
   const dispatch = useDispatch();
   const [openSearch, setOpenSearch] = useState(false);
-  const { getAllProductsLoading, getAllProductsResult } = useSelector(
-    (state) => state.productReducers
-  );
-
-  useEffect(() => {
-    dispatch(getAllProducts());
-  }, []);
+  const [categoriesPage, setCategoriesPage] = useState(false);
 
   const toggleClose = () => {
     if (openSearch) {
@@ -32,8 +26,9 @@ function Home() {
         openSearch={openSearch}
         setOpenSearch={setOpenSearch}
         onClose={toggleClose}
+        changeView={() => setCategoriesPage(!categoriesPage)}
       />
-      <ProductList />
+      {categoriesPage ? <CategoriesList /> : <ProductList />}
     </div>
   );
 }

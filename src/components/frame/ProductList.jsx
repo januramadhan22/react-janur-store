@@ -3,23 +3,25 @@ import { useDispatch, useSelector } from "react-redux";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { getAllProducts } from "../../utils/actions/productActions";
 import Card from "../card/Card";
+import Loading from "../card/Loading";
 
 function ProductList() {
   const dispatch = useDispatch();
   const [openCategories, setOpenCategories] = useState(false);
   const [openSort, setOpenSort] = useState(false);
+  const loading = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   const { getAllProductsLoading, getAllProductsResult } = useSelector(
     (state) => state.productReducers
   );
 
   useEffect(() => {
     dispatch(getAllProducts());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="relative w-full flex gap-5 px-52">
       {/* Menu Side */}
-      <div className="fixed w-56 h-fit flex flex-col justify-start items-start gap-6 px-2 py-4 border rounded-md bg-gray-50 hover:border-gray-400 transition-all ease-out duration-300">
+      <div className="fixed z-30 w-56 h-fit flex flex-col justify-start items-start gap-6 px-2 py-4 border rounded-md bg-gray-50 hover:border-gray-400 transition-all ease-out duration-300">
         <button className="w-full px-4 py-2 rounded-md text-left text-sm text-gray-700 cursor-pointer hover:bg-slate-200">
           All Products
         </button>
@@ -137,15 +139,17 @@ function ProductList() {
 
       {/* List Of Products */}
       <div className="ml-60 w-full grid grid-cols-3 gap-5">
-        {getAllProductsResult &&
-          getAllProductsResult.map((item) => (
-            <Card
-              key={item.id}
-              title={item.title}
-              image={item.image}
-              price={item.price}
-            />
-          ))}
+        {getAllProductsLoading
+          ? loading.map((index) => <Loading key={index} />)
+          : getAllProductsResult &&
+            getAllProductsResult.map((item) => (
+              <Card
+                key={item.id}
+                title={item.title}
+                image={item.image}
+                price={item.price}
+              />
+            ))}
       </div>
     </div>
   );
