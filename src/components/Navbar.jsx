@@ -2,12 +2,23 @@ import React, { useState } from "react";
 import { RiUser6Line } from "react-icons/ri";
 import { HiOutlineSearch } from "react-icons/hi";
 
-function Navbar({ openSearch, setOpenSearch, onClose, changeView }) {
+function Navbar({
+  menuBar,
+  tabMenu,
+  setTabMenu,
+  openSearch,
+  setOpenSearch,
+  onClose,
+}) {
   const [openMenu, setOpenMenu] = useState(false);
+
+  const toggleMenu = (index) => {
+    setTabMenu(index);
+  };
 
   return (
     <>
-      <nav className="sticky top-0 z-10 px-20 py-7 w-full flex items-center justify-center bg-gray-50">
+      <nav className="sticky top-0 z-20 px-20 py-7 w-full flex items-center justify-center bg-gray-50">
         <div
           onClick={onClose}
           className="w-full h-full absolute top-0 left-0 bg-transparent z-20"
@@ -107,21 +118,15 @@ function Navbar({ openSearch, setOpenSearch, onClose, changeView }) {
         onClick={onClose}
         className="sticky top-[88px] z-20 w-full hidden md:flex md:justify-center bg-gray-50 pb-3 transition-all ease-out"
       >
-        <button className="w-32 h-10 text-center uppercase text-sm rounded-lg hover:bg-slate-200 transition-all ease-out duration-200">
-          Discount
-        </button>
-        <button className="w-32 h-10 text-center uppercase text-sm rounded-lg hover:bg-slate-200 transition-all ease-out duration-200">
-          New Arrival
-        </button>
-        <button
-          onClick={changeView}
-          className="w-32 h-10 text-center uppercase text-sm rounded-lg hover:bg-slate-200 transition-all ease-out duration-200"
-        >
-          Categories
-        </button>
-        <button className="w-32 h-10 text-center uppercase text-sm rounded-lg hover:bg-slate-200 transition-all ease-out duration-200">
-          All Products
-        </button>
+        {menuBar.map((menu, index) => (
+          <button
+            key={index}
+            onClick={() => toggleMenu(index)}
+            className="w-32 h-10 text-center uppercase text-sm rounded-lg hover:bg-slate-200 transition-all ease-out duration-200"
+          >
+            {menu}
+          </button>
+        ))}
       </div>
     </>
   );

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { getAllProducts } from "../../utils/actions/productActions";
 import Card from "../card/Card";
-import Loading from "../card/Loading";
+import { LoadingAllProducts } from "../card/Loading";
 
 function ProductList() {
   const dispatch = useDispatch();
@@ -19,7 +19,7 @@ function ProductList() {
   }, [dispatch]);
 
   return (
-    <div className="relative w-full flex gap-5 px-52">
+    <div className="relative w-full flex gap-5">
       {/* Menu Side */}
       <div className="fixed z-30 w-56 h-fit flex flex-col justify-start items-start gap-6 px-2 py-4 border rounded-md bg-gray-50 hover:border-gray-400 transition-all ease-out duration-300">
         <button className="w-full px-4 py-2 rounded-md text-left text-sm text-gray-700 cursor-pointer hover:bg-slate-200">
@@ -140,7 +140,7 @@ function ProductList() {
       {/* List Of Products */}
       <div className="ml-60 w-full grid grid-cols-3 gap-5">
         {getAllProductsLoading
-          ? loading.map((index) => <Loading key={index} />)
+          ? loading.map((index) => <LoadingAllProducts key={index} />)
           : getAllProductsResult &&
             getAllProductsResult.map((item) => (
               <Card
