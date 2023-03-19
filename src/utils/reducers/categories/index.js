@@ -11,9 +11,9 @@ const categories = (state = initialState, action) => {
     case GET_ALL_CATEGORIES:
       return {
         ...state,
-        getAllcategoriesLoading: action.payload.loading,
-        getAllcategoriesResult: action.payload.data,
-        getAllcategoriesError: action.payload.errorMessage,
+        getAllCategoriesLoading: action.payload.loading,
+        getAllCategoriesResult: action.payload.data,
+        getAllCategoriesError: action.payload.errorMessage,
       };
     default:
       return state;

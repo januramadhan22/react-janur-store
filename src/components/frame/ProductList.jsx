@@ -16,7 +16,7 @@ function ProductList() {
 
   useEffect(() => {
     dispatch(getAllProducts());
-  }, [dispatch]);
+  }, []);
 
   return (
     <div className="relative w-full flex gap-5">

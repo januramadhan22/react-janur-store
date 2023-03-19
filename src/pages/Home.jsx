@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Banner from "../components/Banner";
 import Container from "../components/frame/Container";
 import Footer from "../components/Footer";
 import CategoriesList from "../components/frame/CategoriesList";

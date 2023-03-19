@@ -1,11 +1,20 @@
 import React from "react";
 import { HiStar } from "react-icons/hi";
+import { FaShippingFast } from "react-icons/fa";
 
 function Card({ title, image, price }) {
   return (
-    <div className="w-full flex flex-col gap-4">
-      <div className="w-full h-52 flex justify-center">
+    <div className="relative w-full flex flex-col gap-4 cursor-pointer group">
+      <div className="relative w-full h-52 flex justify-center">
         <img src={image} alt={title} className="h-full object-contain" />
+        <div className="absolute bottom-1 left-1 flex items-center gap-1">
+          <p className=" bg-black py-0.5 px-1 text-xs text-white bg-opacity-70 rounded-sm">
+            Available
+          </p>
+          <div className="py-0.5 px-2 bg-red-400 text-white rounded-sm">
+            <FaShippingFast />
+          </div>
+        </div>
       </div>
       <div className="w-full px-2 space-y-1 text-left">
         <h3 className="text-lg truncate">{title}</h3>
