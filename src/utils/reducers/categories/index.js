@@ -1,9 +1,16 @@
-import { GET_ALL_CATEGORIES } from "../../actions/categorieActions";
+import {
+  GET_ALL_CATEGORIES,
+  GET_SPECIFIED_CATEGORY,
+} from "../../actions/categorieActions";
 
 const initialState = {
   getAllCategoriesLoading: false,
   getAllCategoriesResult: false,
   getAllCategoriesError: false,
+
+  getSpecifiedCategoryLoading: false,
+  getSpecifiedCategoryResult: false,
+  getSpecifiedCategoryError: false,
 };
 
 const categories = (state = initialState, action) => {
@@ -14,6 +21,14 @@ const categories = (state = initialState, action) => {
         getAllCategoriesLoading: action.payload.loading,
         getAllCategoriesResult: action.payload.data,
         getAllCategoriesError: action.payload.errorMessage,
+      };
+
+    case GET_SPECIFIED_CATEGORY:
+      return {
+        ...state,
+        getSpecifiedCategoryLoading: action.payload.loading,
+        getSpecifiedCategoryResult: action.payload.data,
+        getSpecifiedCategoryError: action.payload.errorMessage,
       };
     default:
       return state;
