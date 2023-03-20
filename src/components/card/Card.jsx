@@ -2,7 +2,7 @@ import React from "react";
 import { HiStar } from "react-icons/hi";
 import { FaShippingFast } from "react-icons/fa";
 
-function Card({ title, image, price, isLarge = false }) {
+function Card({ title, image, price, discount, isLarge = false }) {
   return (
     <div className="relative w-full flex flex-col gap-4 cursor-pointer group">
       <div
@@ -22,7 +22,24 @@ function Card({ title, image, price, isLarge = false }) {
       </div>
       <div className="w-full px-2 space-y-1 text-left">
         <h3 className="text-lg truncate">{title}</h3>
-        <p className="text-gray-500">$ {price}</p>
+        <p
+          className={`text-gray-500 ${
+            discount && "flex flex-col leading-snug"
+          }`}
+        >
+          <span className={discount && "line-through"}>$ {price}</span>
+
+          {discount && (
+            <span className="text-red-400">$ {price - discount}</span>
+          )}
+
+          {discount && (
+            <span className="w-fit px-1.5 py-0 bg-red-400 rounded-sm text-xs text-white">
+              - $ {discount}
+            </span>
+          )}
+        </p>
+
         <span className="flex items-center gap-1">
           <HiStar className="text-yellow-500" /> 4,95
         </span>
