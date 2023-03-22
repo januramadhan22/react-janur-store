@@ -15,10 +15,9 @@ function ProductList() {
   const [openSort, setOpenSort] = useState(false);
   const loading = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   const [all, setAll] = useState(true);
-  const [electronics, setElectronics] = useState(false);
-  const [jewelery, setJewelery] = useState(false);
-  const [mens, setMens] = useState(false);
-  const [womens, setWomens] = useState(false);
+  const [tshirt, setTshirt] = useState(false);
+  const [totebag, setTotebag] = useState(false);
+  const [pants, setPants] = useState(false);
 
   const { getAllProductsLoading, getAllProductsResult } = useSelector(
     (state) => state.productReducers
@@ -33,23 +32,22 @@ function ProductList() {
     if (all) {
       dispatch(getAllProducts());
       dispatch(getAllCategories());
-    } else if (electronics || jewelery || mens || womens) {
+    } else if (tshirt || totebag || pants) {
       dispatch(getSpecifiedCategory());
       dispatch(getAllCategories());
     }
   }, [dispatch]);
 
   return (
-    <div className="relative w-full flex gap-5">
+    <div className="relative w-full min-h-screen flex gap-5">
       {/* Menu Side */}
       <div className="fixed z-30 w-56 h-fit flex flex-col justify-start items-start gap-6 px-2 py-4 border rounded-md bg-gray-50 hover:border-gray-400 transition-all ease-out duration-300">
         <button
           onClick={() => {
             setAll(true) || dispatch(getAllProducts());
-            setElectronics(false);
-            setJewelery(false);
-            setMens(false);
-            setWomens(false);
+            setTshirt(false);
+            setTotebag(false);
+            setPants(false);
           }}
           className="w-full px-4 py-2 rounded-md text-left text-sm text-gray-700 cursor-pointer hover:bg-slate-200"
         >
@@ -77,25 +75,21 @@ function ProductList() {
             }`}
           >
             {getAllCategoriesResult &&
-              getAllCategoriesResult.map((item, index) => (
+              getAllCategoriesResult.map((category, index) => (
                 <button
                   key={index}
                   onClick={() => {
-                    item == "electronics"
-                      ? setElectronics(true) ||
+                    category == "t-shirt"
+                      ? setTshirt(true) ||
                         setAll(false) ||
-                        dispatch(getSpecifiedCategory(item))
-                      : item == "jewelery"
-                      ? setJewelery(true) ||
+                        dispatch(getSpecifiedCategory(category))
+                      : category == "totebag"
+                      ? setTotebag(true) ||
                         setAll(false) ||
-                        dispatch(getSpecifiedCategory(item))
-                      : item == "men's clothing"
-                      ? setMens(true) ||
+                        dispatch(getSpecifiedCategory(category))
+                      : setPants(true) ||
                         setAll(false) ||
-                        dispatch(getSpecifiedCategory(item))
-                      : setWomens(true) ||
-                        setAll(false) ||
-                        dispatch(getSpecifiedCategory(item));
+                        dispatch(getSpecifiedCategory(category));
                   }}
                   className={`w-full flex items-center justify-between px-6 py-2 rounded-md text-left text-sm text-gray-700 capitalize cursor-pointer hover:bg-slate-200 transition-all ease-out ${
                     openCategories
@@ -103,7 +97,7 @@ function ProductList() {
                       : "absolute top-0 opacity-0 invisible"
                   }`}
                 >
-                  {item}
+                  {category}
                 </button>
               ))}
           </div>
@@ -170,17 +164,19 @@ function ProductList() {
             getAllProductsResult.map((item) => (
               <Card
                 key={item.id}
-                title={item.title}
+                name={item.name}
                 image={item.image}
                 price={item.price}
+                rate={item.rate}
               />
             ))
           : getSpecifiedCategoryResult.map((item) => (
               <Card
                 key={item.id}
-                title={item.title}
+                name={item.name}
                 image={item.image}
                 price={item.price}
+                rate={item.rate}
               />
             ))}
       </div>

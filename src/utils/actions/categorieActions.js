@@ -15,7 +15,7 @@ export const getAllCategories = () => {
     });
 
     axiosCreate
-      .get("products/categories")
+      .get("categories")
       .then((response) => {
         dispatch({
           type: GET_ALL_CATEGORIES,
@@ -51,7 +51,7 @@ export const getSpecifiedCategory = (category) => {
     });
 
     axiosCreate
-      .get(`products/category/${category}`)
+      .get(`${category}`)
       .then((response) => {
         dispatch({
           type: GET_SPECIFIED_CATEGORY,

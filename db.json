@@ -1,0 +1,157 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Janur T-Shirt - Dash",
+      "price": 83000,
+      "category": "T-Shirt",
+      "rate": 4.95,
+      "description": "Kaos ini dibuat dengan menggunakan bahan yang berkualitas, seperti Cotton Combed 24s dan disablon dengan menggunakan Plastisol Press. Kaos ini memiliki ukuran mulai dari M, L, XL dan 2XL.",
+      "image": "https://down-id.img.susercontent.com/file/96e82e8e1e31f6618871d0534266b8c1"
+    },
+    {
+      "id": 2,
+      "name": "Janur T-Shirt - Gembot",
+      "price": 83000,
+      "category": "T-Shirt",
+      "rate": 4.85,
+      "description": "Kaos ini dibuat dengan menggunakan bahan yang berkualitas, seperti Cotton Combed 24s dan disablon dengan menggunakan Plastisol Press. Kaos ini memiliki ukuran mulai dari M, L, XL dan 2XL.",
+      "image": "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEORIrJosh1c9YyCwr7S6IVN27IIp5nipNs2w-Lublea1YR5AG3HNaTLIs34ybDu78RrI5cLx4S0s7aa1JEBl7OXiM3Bv1g=w1366-h695"
+    },
+    {
+      "id": 3,
+      "name": "Janur T-Shirt - Life",
+      "price": 83000,
+      "category": "T-Shirt",
+      "rate": 5,
+      "description": "Kaos ini dibuat dengan menggunakan bahan yang berkualitas, seperti Cotton Combed 24s dan disablon dengan menggunakan Plastisol Press. Kaos ini memiliki ukuran mulai dari M, L, XL dan 2XL.",
+      "image": "https://down-id.img.susercontent.com/file/6bf6615f26f7e54ebcef6af1847bdb25"
+    },
+    {
+      "id": 4,
+      "name": "Janur Totebag - Dash",
+      "price": 45000,
+      "category": "Totebag",
+      "rate": 5,
+      "description": "Totebag ini dibuat dengan menggunakan bahan yang berkualitas, seperti Premium Canvas dan disablon dengan menggunakan Plastisol Press. Totebag ini memiliki ukuran mulai 30cm x 40cm.",
+      "image": "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOQQXMiTywqX5nBzwj2X0xEvXikkukrHq1KXsTG1Sa-Y7FogaL76Q4YzyiqAGCeBlOlu7RLnp3lEJeLpmgm69o7qnaT_BA=w1366-h695"
+    },
+    {
+      "id": 5,
+      "name": "Janur Totebag - Gembot",
+      "price": 45000,
+      "category": "Totebag",
+      "rate": 5,
+      "description": "Totebag ini dibuat dengan menggunakan bahan yang berkualitas, seperti Premium Canvas dan disablon dengan menggunakan Plastisol Press. Totebag ini memiliki ukuran mulai 30cm x 40cm.",
+      "image": "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOSvSfz_eauwspHIsufaoYY03OO0RvnBE4siu_Z-kCM9plATEaTYCEJrEmmO0PgH6D2Jq8lLa8LWiWO1pAVrJ2NEqIFr-Q=w1366-h695"
+    },
+    {
+      "id": 6,
+      "name": "Janur Totebag - Life",
+      "price": 45000,
+      "category": "Totebag",
+      "rate": 5,
+      "description": "Totebag ini dibuat dengan menggunakan bahan yang berkualitas, seperti Premium Canvas dan disablon dengan menggunakan Plastisol Press. Totebag ini memiliki ukuran mulai 30cm x 40cm.",
+      "image": "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEORwtlK69JSsm2M39e4nXW2aMH5rjlIwO5TNaYVEzyjl3kjn1fMNsTnWTOMpG27RUQD9eJdg0YuPuwYxmNfo-lzGoZ1AgA=w1366-h695"
+    },
+    {
+      "id": 7,
+      "name": "Janur Short Pants",
+      "price": 52.0,
+      "category": "Pants",
+      "rate": 4.75,
+      "description": "Celana pendek ini dibuat dengan menggunakan bahan yang berkualitas dengan menggunakan bahan premium dan disablon dengan menggunakan Plastisol Press. Kaos ini memiliki ukuran mulai dari 29, 30, 31 dan 32.",
+      "image": "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTvNCT1dozZQannUInpJGLkLM73HhrC64Ft0JS59SMF8dOn-y3JNGZsmWj0FwEsoqLia6ISIF5UQzD92-DCDeEwmn58_g=w1366-h695"
+    }
+  ],
+  "categories": ["t-shirt", "totebag", "pants"],
+  "t-shirt": [
+    {
+      "id": 1,
+      "name": "Janur T-Shirt - Dash",
+      "price": 83000,
+      "category": "T-Shirt",
+      "rate": 4.95,
+      "description": "Kaos ini dibuat dengan menggunakan bahan yang berkualitas, seperti Cotton Combed 24s dan disablon dengan menggunakan Plastisol Press. Kaos ini memiliki ukuran mulai dari M, L, XL dan 2XL.",
+      "image": "https://down-id.img.susercontent.com/file/96e82e8e1e31f6618871d0534266b8c1"
+    },
+    {
+      "id": 2,
+      "name": "Janur T-Shirt - Gembot",
+      "price": 83000,
+      "category": "T-Shirt",
+      "rate": 4.85,
+      "description": "Kaos ini dibuat dengan menggunakan bahan yang berkualitas, seperti Cotton Combed 24s dan disablon dengan menggunakan Plastisol Press. Kaos ini memiliki ukuran mulai dari M, L, XL dan 2XL.",
+      "image": "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEORIrJosh1c9YyCwr7S6IVN27IIp5nipNs2w-Lublea1YR5AG3HNaTLIs34ybDu78RrI5cLx4S0s7aa1JEBl7OXiM3Bv1g=w1366-h695"
+    },
+    {
+      "id": 3,
+      "name": "Janur T-Shirt - Life",
+      "price": 83000,
+      "category": "T-Shirt",
+      "rate": 5,
+      "description": "Kaos ini dibuat dengan menggunakan bahan yang berkualitas, seperti Cotton Combed 24s dan disablon dengan menggunakan Plastisol Press. Kaos ini memiliki ukuran mulai dari M, L, XL dan 2XL.",
+      "image": "https://down-id.img.susercontent.com/file/6bf6615f26f7e54ebcef6af1847bdb25"
+    }
+  ],
+  "totebag": [
+    {
+      "id": 1,
+      "name": "Janur Totebag - Dash",
+      "price": 45000,
+      "category": "Totebag",
+      "rate": 5,
+      "description": "Totebag ini dibuat dengan menggunakan bahan yang berkualitas, seperti Premium Canvas dan disablon dengan menggunakan Plastisol Press. Totebag ini memiliki ukuran mulai 30cm x 40cm.",
+      "image": "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOQQXMiTywqX5nBzwj2X0xEvXikkukrHq1KXsTG1Sa-Y7FogaL76Q4YzyiqAGCeBlOlu7RLnp3lEJeLpmgm69o7qnaT_BA=w1366-h695"
+    },
+    {
+      "id": 2,
+      "name": "Janur Totebag - Gembot",
+      "price": 45000,
+      "category": "Totebag",
+      "rate": 5,
+      "description": "Totebag ini dibuat dengan menggunakan bahan yang berkualitas, seperti Premium Canvas dan disablon dengan menggunakan Plastisol Press. Totebag ini memiliki ukuran mulai 30cm x 40cm.",
+      "image": "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOSvSfz_eauwspHIsufaoYY03OO0RvnBE4siu_Z-kCM9plATEaTYCEJrEmmO0PgH6D2Jq8lLa8LWiWO1pAVrJ2NEqIFr-Q=w1366-h695"
+    },
+    {
+      "id": 3,
+      "name": "Janur Totebag - Life",
+      "price": 45000,
+      "category": "Totebag",
+      "rate": 5,
+      "description": "Totebag ini dibuat dengan menggunakan bahan yang berkualitas, seperti Premium Canvas dan disablon dengan menggunakan Plastisol Press. Totebag ini memiliki ukuran mulai 30cm x 40cm.",
+      "image": "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEORwtlK69JSsm2M39e4nXW2aMH5rjlIwO5TNaYVEzyjl3kjn1fMNsTnWTOMpG27RUQD9eJdg0YuPuwYxmNfo-lzGoZ1AgA=w1366-h695"
+    }
+  ],
+  "pants": [
+    {
+      "id": 1,
+      "name": "Janur Short Pants",
+      "price": 52000,
+      "category": "Pants",
+      "rate": 4.75,
+      "description": "Celana pendek ini dibuat dengan menggunakan bahan yang berkualitas dengan menggunakan bahan premium dan disablon dengan menggunakan Plastisol Press. Kaos ini memiliki ukuran mulai dari 29, 30, 31 dan 32.",
+      "image": "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOTvNCT1dozZQannUInpJGLkLM73HhrC64Ft0JS59SMF8dOn-y3JNGZsmWj0FwEsoqLia6ISIF5UQzD92-DCDeEwmn58_g=w1366-h695"
+    }
+  ],
+  "new-arrival": [
+    {
+      "id": 1,
+      "name": "Janur T-Shirt - Life",
+      "price": 83000,
+      "category": "T-Shirt",
+      "rate": 5,
+      "description": "Kaos ini dibuat dengan menggunakan bahan yang berkualitas, seperti Cotton Combed 24s dan disablon dengan menggunakan Plastisol Press. Kaos ini memiliki ukuran mulai dari M, L, XL dan 2XL.",
+      "image": "https://down-id.img.susercontent.com/file/6bf6615f26f7e54ebcef6af1847bdb25"
+    },
+    {
+      "id": 2,
+      "name": "Janur Totebag - Life",
+      "price": 45000,
+      "category": "Totebag",
+      "rate": 5,
+      "description": "Totebag ini dibuat dengan menggunakan bahan yang berkualitas, seperti Premium Canvas dan disablon dengan menggunakan Plastisol Press. Totebag ini memiliki ukuran mulai 30cm x 40cm.",
+      "image": "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEORwtlK69JSsm2M39e4nXW2aMH5rjlIwO5TNaYVEzyjl3kjn1fMNsTnWTOMpG27RUQD9eJdg0YuPuwYxmNfo-lzGoZ1AgA=w1366-h695"
+    }
+  ]
+}
